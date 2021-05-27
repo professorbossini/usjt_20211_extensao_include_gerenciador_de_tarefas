@@ -9,6 +9,7 @@ import { ButtonModule } from 'primeng/button';
 import { FormsModule } from '@angular/forms';
 import { SelectButtonModule } from 'primeng/selectbutton';
 import { ChartModule } from 'primeng/chart';
+import { HttpClientModule } from '@angular/common/http';
 
 
 @NgModule({
@@ -17,6 +18,7 @@ import { ChartModule } from 'primeng/chart';
   ],
   imports: [
     BrowserModule,
+    HttpClientModule,
     TabViewModule,
     CardModule,
     InputTextModule,
