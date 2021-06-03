@@ -51,8 +51,13 @@ export class AppComponent implements OnInit {
       descricao: tarefaForm.value.tarefa,
       finalizada: false
     }
-    this.tarefas.push(t);
+    //this.tarefas.push(t);
+    this.tarefaService.add(t);
     tarefaForm.resetForm();
     //console.log(tarefaForm);
+  }
+
+  atualizar (tarefa: Tarefa){
+    this.tarefaService.update(tarefa);
   }
 }

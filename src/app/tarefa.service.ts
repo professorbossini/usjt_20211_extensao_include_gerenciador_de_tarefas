@@ -24,4 +24,16 @@ export class TarefaService {
       this.colecaoAtualizada.next(resultado.tarefas);
     });
   }
+
+  public add (tarefa: Tarefa){
+    this.httpClient.post<{tarefas: Tarefa[]}>(this.baseURL, tarefa).subscribe (resultado => {
+      this.colecaoAtualizada.next(resultado.tarefas);
+    })
+  }
+
+  public update (tarefa: Tarefa){
+    this.httpClient.put<{tarefas: Tarefa[]}>(this.baseURL, tarefa).subscribe(resultado => {
+      this.colecaoAtualizada.next(resultado.tarefas);
+    })
+  }
 }

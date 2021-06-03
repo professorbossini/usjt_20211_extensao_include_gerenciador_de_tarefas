@@ -28,6 +28,7 @@
                 optionLabel="rotulo"
                 optionValue="valor"
                 [(ngModel)]="tarefa.finalizada"
+                (onChange)="atualizar(tarefa)"
               >
 
               </p-selectButton>
